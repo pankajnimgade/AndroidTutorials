@@ -5,11 +5,25 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import com.example.test101.R;
+import com.example.test101.main.SingleMenuItem;
+import com.example.test101.test.Test101Activity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private ListView menu_ListView;
+    private List<SingleMenuItem> singleMenuItems;
+    private ArrayAdapter<SingleMenuItem> arrayAdapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +40,17 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        initializeListView();
+    }
+
+    private void initializeListView() {
+        menu_ListView = (ListView) findViewById(R.id.MainActivity_ListView_menu);
+        singleMenuItems = new ArrayList<>();
+        singleMenuItems.add(new SingleMenuItem("TestActivity101", Test101Activity.class));
+
+        arrayAdapter = new ArrayAdapter<SingleMenuItem>(getApplicationContext(), android.R.layout.simple_list_item_1, singleMenuItems);
+        menu_ListView.setAdapter(arrayAdapter);
     }
 
     @Override

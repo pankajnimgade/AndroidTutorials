@@ -10,7 +10,8 @@ import org.junit.Test;
 public class EmailCheckerTest {
 
     @Test
-    public void email_Test(){
-        Assert.assertArrayEquals(new char[]{'a'},new char[]{'a'});
+    public void email_Test() {
+        Assert.assertArrayEquals(new char[]{'a'}, new char[]{'a'});
+        System.out.println(this.getClass().getSimpleName() + " : email_Test has completed ");
     }
 }

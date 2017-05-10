@@ -8,10 +8,11 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
-import com.example.test101.R;
 import com.example.test101.main.SingleMenuItem;
 import com.example.test101.test.Test101Activity;
 
@@ -49,8 +50,18 @@ public class MainActivity extends AppCompatActivity {
         singleMenuItems = new ArrayList<>();
         singleMenuItems.add(new SingleMenuItem("TestActivity101", Test101Activity.class));
 
-        arrayAdapter = new ArrayAdapter<SingleMenuItem>(getApplicationContext(), android.R.layout.simple_list_item_1, singleMenuItems);
+        arrayAdapter = new ArrayAdapter<SingleMenuItem>(getApplicationContext(),
+                R.layout.simple_list_item_1, singleMenuItems);
         menu_ListView.setAdapter(arrayAdapter);
+        menu_ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                SingleMenuItem singleMenuItem = singleMenuItems.get(position);
+                Toast.makeText(MainActivity.this, "" + singleMenuItem.getTitle_Activity(),
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override

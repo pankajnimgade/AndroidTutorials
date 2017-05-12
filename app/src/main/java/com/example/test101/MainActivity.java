@@ -1,5 +1,6 @@
 package com.example.test101;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -59,6 +60,9 @@ public class MainActivity extends AppCompatActivity {
                 SingleMenuItem singleMenuItem = singleMenuItems.get(position);
                 Toast.makeText(MainActivity.this, "" + singleMenuItem.getTitle_Activity(),
                         Toast.LENGTH_SHORT).show();
+                Intent activityIntent = new Intent(getApplicationContext(), singleMenuItem
+                        .getClass_Activity());
+                startActivity(activityIntent);
             }
         });
 

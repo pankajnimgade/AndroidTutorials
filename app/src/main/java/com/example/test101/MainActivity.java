@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         arrayAdapter = new ArrayAdapter<SingleMenuItem>(getApplicationContext(),
                 R.layout.simple_list_item_1, singleMenuItems);
         menu_ListView.setAdapter(arrayAdapter);
-        menu_ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+       /* menu_ListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 SingleMenuItem singleMenuItem = singleMenuItems.get(position);
@@ -64,6 +64,16 @@ public class MainActivity extends AppCompatActivity {
                         .getClass_Activity());
                 startActivity(activityIntent);
             }
+        });*/
+
+        menu_ListView.setOnItemClickListener((AdapterView<?> parent, View view, int position,
+                                              long id) -> {
+            SingleMenuItem singleMenuItem = singleMenuItems.get(position);
+            Toast.makeText(MainActivity.this, "" + singleMenuItem.getTitle_Activity(),
+                    Toast.LENGTH_SHORT).show();
+            Intent activityIntent = new Intent(getApplicationContext(), singleMenuItem
+                    .getClass_Activity());
+            startActivity(activityIntent);
         });
 
     }

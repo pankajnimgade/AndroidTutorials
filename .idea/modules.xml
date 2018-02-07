@@ -3,12 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidTutorialLibrary/AndroidTutorialLibrary.iml" filepath="$PROJECT_DIR$/AndroidTutorialLibrary/AndroidTutorialLibrary.iml" />
-      <module fileurl="file://H:\Projects\Android_Projects\AndroidTutorials\AndroidTutorialLibrary\AndroidTutorialLibrary.iml" filepath="H:\Projects\Android_Projects\AndroidTutorials\AndroidTutorialLibrary\AndroidTutorialLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidTutorials.iml" filepath="$PROJECT_DIR$/AndroidTutorials.iml" />
       <module fileurl="file://$PROJECT_DIR$/NewFeatures/NewFeatures.iml" filepath="$PROJECT_DIR$/NewFeatures/NewFeatures.iml" />
-      <module fileurl="file://H:\Projects\Android_Projects\AndroidTutorials\Test101.iml" filepath="H:\Projects\Android_Projects\AndroidTutorials\Test101.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://H:\Projects\Android_Projects\AndroidTutorials\app\app.iml" filepath="H:\Projects\Android_Projects\AndroidTutorials\app\app.iml" />
     </modules>
   </component>
 </project>

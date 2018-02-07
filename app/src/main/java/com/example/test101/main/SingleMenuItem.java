@@ -1,5 +1,7 @@
 package com.example.test101.main;
 
+import android.app.Activity;
+
 /**
  * Created by Heidi on 5/6/2017.
  */

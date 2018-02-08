@@ -29,6 +29,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.test.sdg.newfeatures.MainActivity" />
         </activity>
+        <activity
+            android:name=".activities.user.profile.UserProfileActivity"
+            android:label="@string/title_activity_user_profile"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.test.sdg.newfeatures.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

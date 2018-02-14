@@ -12,6 +12,7 @@ import android.util.Log
 import android.view.*
 import android.widget.TextView
 import com.test.sdg.newfeatures.activities.example.ExampleActivity
+import com.test.sdg.newfeatures.activities.room.list.RoomListActivity
 import com.test.sdg.newfeatures.activities.user.profile.UserProfileActivity
 import com.test.sdg.newfeatures.application.model.ActivityItem
 
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         val activityList = ArrayList<ActivityItem>()
         activityList.add(ActivityItem("ExampleActivity", ExampleActivity::class.java))
         activityList.add(ActivityItem("UserProfileActivity", UserProfileActivity::class.java))
+        activityList.add(ActivityItem("RoomListActivity", RoomListActivity::class.java))
         val adapter = ActivityAdapter(this,activityList )
 
         recyclerView.adapter = adapter

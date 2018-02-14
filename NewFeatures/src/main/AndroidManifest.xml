@@ -38,6 +38,24 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.test.sdg.newfeatures.MainActivity" />
         </activity>
+        <activity
+            android:name=".activities.room.list.RoomListActivity"
+            android:label="@string/title_activity_room_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.test.sdg.newfeatures.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.lifecycle.LifeCycleActivity"
+            android:label="@string/title_activity_life_cycle"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.test.sdg.newfeatures.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

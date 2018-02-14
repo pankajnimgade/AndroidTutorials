@@ -13,6 +13,7 @@
 
 package com.test.sdg.newfeatures.activities.user.profile;
 
+import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.net.Uri;
@@ -117,6 +118,13 @@ public class UserProfileFragment extends Fragment {
             firstName.setText(user.getFirstName());
             lastName.setText(user.getLastName());
         });
+
+       /* viewModel.getUserProfile().observe(this, new Observer<UserProfile>() {
+            @Override
+            public void onChanged(@Nullable UserProfile userProfile) {
+
+            }
+        });*/
     }
 
     @Override

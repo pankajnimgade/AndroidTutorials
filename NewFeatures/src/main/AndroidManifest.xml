@@ -13,8 +13,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"
-           >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -52,8 +51,17 @@
             android:name=".activities.lifecycle.LifeCycleActivity"
             android:label="@string/title_activity_life_cycle"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar"
-            android:screenOrientation="sensor">
+            android:screenOrientation="sensor"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.test.sdg.newfeatures.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.live.data.LiveDataActivity"
+            android:label="@string/title_activity_live_data"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.test.sdg.newfeatures.MainActivity" />

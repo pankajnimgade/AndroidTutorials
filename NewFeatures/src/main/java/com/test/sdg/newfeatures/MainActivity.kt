@@ -11,7 +11,10 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import android.view.*
 import android.widget.TextView
+import com.test.sdg.newfeatures.activities.circle.animation.CircleAnimationActivity
+import com.test.sdg.newfeatures.activities.circle.animation.test101.TestCircle101Activity
 import com.test.sdg.newfeatures.activities.example.ExampleActivity
+import com.test.sdg.newfeatures.activities.extend.live.data.ExtendLiveDataActivity
 import com.test.sdg.newfeatures.activities.lifecycle.LifeCycleActivity
 import com.test.sdg.newfeatures.activities.live.data.LiveDataActivity
 import com.test.sdg.newfeatures.activities.room.list.RoomListActivity
@@ -50,7 +53,10 @@ class MainActivity : AppCompatActivity() {
         activityList.add(ActivityItem("RoomListActivity", RoomListActivity::class.java))
         activityList.add(ActivityItem("LifeCycleActivity", LifeCycleActivity::class.java))
         activityList.add(ActivityItem("LiveDataActivity", LiveDataActivity::class.java))
-        val adapter = ActivityAdapter(this,activityList )
+        activityList.add(ActivityItem("ExtendLiveDataActivity", ExtendLiveDataActivity::class.java))
+        activityList.add(ActivityItem("CircleAnimationActivity", CircleAnimationActivity::class.java))
+        activityList.add(ActivityItem("TestCircle101Activity", TestCircle101Activity::class.java))
+        val adapter = ActivityAdapter(this, activityList)
 
         recyclerView.adapter = adapter
         adapter.notifyDataSetChanged()
@@ -105,7 +111,7 @@ class MainActivity : AppCompatActivity() {
     class ActivityAdapter(private val mContext: Context, private val activityList:
     List<ActivityItem>) :
             RecyclerView
-    .Adapter<ActivityAdapter.ActivityViewHolder>() {
+            .Adapter<ActivityAdapter.ActivityViewHolder>() {
 
         private var layoutInflater: LayoutInflater = LayoutInflater.from(mContext)
 
@@ -121,7 +127,7 @@ class MainActivity : AppCompatActivity() {
         override fun onBindViewHolder(holder: ActivityViewHolder?, position: Int) {
             holder?.activityNameTextView?.text = activityList[position].activityName
             holder?.rootLayoutCardView?.setOnClickListener {
-                mContext.startActivity(Intent(mContext,activityList[position].activityClass ))
+                mContext.startActivity(Intent(mContext, activityList[position].activityClass))
             }
         }
 

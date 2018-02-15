@@ -10,4 +10,7 @@
     <string name="title_activity_room_list">RoomListActivity</string>
     <string name="title_activity_life_cycle">LifeCycleActivity</string>
     <string name="title_activity_live_data">LiveDataActivity</string>
+    <string name="title_activity_extend_live_data">ExtendLiveDataActivity</string>
+    <string name="title_activity_circle_animation">CircleAnimationActivity</string>
+    <string name="title_activity_test_circle101">TestCircle101Activity</string>
 </resources>

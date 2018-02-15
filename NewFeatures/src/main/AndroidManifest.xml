@@ -66,6 +66,33 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.test.sdg.newfeatures.MainActivity" />
         </activity>
+        <activity
+            android:name=".activities.extend.live.data.ExtendLiveDataActivity"
+            android:label="@string/title_activity_extend_live_data"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.test.sdg.newfeatures.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.circle.animation.CircleAnimationActivity"
+            android:label="@string/title_activity_circle_animation"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.test.sdg.newfeatures.MainActivity" />
+        </activity>
+        <activity
+            android:name=".activities.circle.animation.test101.TestCircle101Activity"
+            android:label="@string/title_activity_test_circle101"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.test.sdg.newfeatures.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
